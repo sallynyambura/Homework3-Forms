@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./style.css" >
+    <script src="./main.js"></script>
+</head>
+<body>
+    <form name="mainForm" onsubmit="return false">
+        <fieldset id="section1" class="active">
+            <legend>Choose User Type</legend>
+            <button onclick="showSection('section2')">Click for New User</button>
+            <button onclick="showSection('section3')">Click for Existing User</button>
+        </fieldset>
+    
+        <fieldset id="section2" class="disabled">
+            <legend>New User Section</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" autocomplete="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" autocomplete="new-password" required>
+            <label for="city">City:</label>
+            <input type="text" id="city" autocomplete="address-level2" required>
+            <label for="state">State:</label>
+            <input type="text" id="state" autocomplete="address-level1" required>
+            <button onclick="newUserLogin()">Login</button>
+        </fieldset>
+    
+        <fieldset id="section3" class="disabled">
+            <legend>Existing User Section</legend>
+            <label for="existingUsername">Username:</label>
+            <input type="text" id="existingUsername" autocomplete="username" required>
+            <label for="existingPassword">Password:</label>
+            <input type="password" id="existingPassword" autocomplete="current-password" required>
+            <button onclick="existingUserLogin()">Login</button>
+        </fieldset>
+    </form>
+
+    
+</body>
+</html>

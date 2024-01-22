@@ -1,0 +1,8 @@
+fieldset {
+    margin-bottom: 20px;
+    display: none;
+}
+
+.active {
+    display: block;
+}
